@@ -45589,7 +45589,7 @@ const glob_1 = __importDefault(__webpack_require__(402));
 const p_all_1 = __importDefault(__webpack_require__(426));
 const p_retry_1 = __importDefault(__webpack_require__(754));
 function normalizePath(input) {
-    return input.replace(/^\//, '').split(path_1.default.sep).join('/');
+    return input.split(path_1.default.sep).join(path_1.default.posix.sep).replace(/^\//, '');
 }
 function upload(token, srcDir, destDir, ignoreSourceMap, onProgress, onComplete, onFail) {
     const baseDir = path_1.default.resolve(process.cwd(), srcDir);
