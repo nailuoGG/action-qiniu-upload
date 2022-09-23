@@ -5,7 +5,7 @@ import pAll from 'p-all';
 import pRetry from 'p-retry';
 
 function normalizePath(input: string): string {
-  return input.replace(/^\//, '').split(path.sep).join('/');
+  return input.replace(/^\//, '').split(path.sep).join(path.posix.sep);
 }
 
 export function upload(
